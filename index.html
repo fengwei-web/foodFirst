@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=yes">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/common/reset.css">
+    <link rel="stylesheet" href="./css/common/flex.css">
+    <link rel="stylesheet" href="./css/common/header.css">
+    <link rel="stylesheet" href="./css/common/icon.css">
+    <link rel="stylesheet" href="./css/common/fullpage.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/fullpage.js"></script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section slide fullPage_one" style="margin: auto 0; position: relative;">
+            <div class="header-top"></div>
+            <div class="slide fullpage_one_term">
+                <h3 style="width: 50%;margin: 0 auto;font-size: 35px;">Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                <p style="width: 50%;margin: 15px auto;font-size: 35px;">设置页面停留时间单位：毫秒</p>
+            </div>
+            <div class="slide fullpage_one_term">
+                <h3 style="width: 50%;margin: 0 auto;font-size: 35px;">Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                <p style="width: 50%;margin: 15px auto;font-size: 35px;">设置页面停留时间单位：毫秒</p>
+            </div>
+            <div class="slide fullpage_one_term">
+                <h3 style="width: 50%;margin: 0 auto;font-size: 35px;">Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                <p style="width: 50%;margin: 15px auto;font-size: 35px;">设置页面停留时间单位：毫秒</p>
+            </div>
+        </div>
+        <div class="section fp-tableCell fullPage_two">
+            <div class="header-top2"></div>
+            <div class="fullPage_two_content flex flex--align-items--center flex--justify-content--center">
+                <div class="fullPage_two_content_pic">
+                    <img src="./img/home/2.png" alt="">
+                </div>
+                <div class="fullPage_two_content_info flex flex--row flex--justify-content--space-between">
+                    <h3>民以食为天，食以安为先。</h3>
+                    <p> 北京食为先生态农业园有限责任公司，是一家以“有机”为核心，以“生态”为理念的新时代农业+物联网+互联网的产业公司，公司集果蔬种植及采摘、市民农园、共享农园、休闲度假、参观体验、社会参与为一体，打造了一个农产品互联网线上消费线下体验的实体企业，为市民提供安全健康食品，让人们吃的安心、吃的健康。</p>
+                    <div class="fullPage_two_content_pic_info_btn">
+                        <i class="icon iconfont iconqianwang"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section fp-tableCell fullPage_three active">
+            <div class="header-top"></div>
+            <div class="setOut flex flex--row flex--align-items--center flex--justify-content--center">
+                <b class="setOut_tit">Let the food return to the taste of childhood</b>
+                <b class="setOut_con">让食品回归小时候的味道</b>
+            </div>
+        </div>
+        <div class="section slide">Some section</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(".header-top").load("./commonHtml/header.html");
+    $(".header-top2").load("./commonHtml/header2.html");
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            navigation: true,
+            navigationPosition: 'right',
+            // loopBottom: true, // 滚动到最后一屏之后继续滚动到第一屏
+        });
+
+        // $.fn.fullpage.moveSlideRight();
+        
+    });
+
+
+
+
+    // 第三屏
+    $(".fullPage_three").on('mouseover',()=>{
+        console.log("111")
+        // setTimeout(()=>{
+        //     $(".fullPage_three").css('background-image',"url('./img/home/3-1.png')");
+        // },3000)
+    })
+
+
+
+    // js判断当前环境是在pc端还是手机端
+
+
+    // mozilla/5.0 (linux; android 5.0; sm-g900p build/lrx21t) applewebkit/537.36 (khtml, like gecko) chrome/87.0.4280.88 mobile safari/537.36
+    // mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/87.0.4280.88 safari/537.36
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    // var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    // var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    // var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    // var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    // var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    // var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    // var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    // var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    // if(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+    //     alert("您是手机登录");
+    // } else {
+    //     alert("您是电脑登录");
+    // }
+</script>
