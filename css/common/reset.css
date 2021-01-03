@@ -3,6 +3,11 @@ html {
     overflow-y: scroll;
 }
 
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
 body,
 dl,
 dt,
@@ -36,7 +41,7 @@ h5 {
 body {
     background-color: #FFFFFF;
     color: #666666;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 微软雅黑;
     font-size: 12px;
     text-align: left;
 }

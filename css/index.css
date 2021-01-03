@@ -10,7 +10,7 @@ body,html{
 .fullPage_one,.fullPage_two,.fullPage_three{
     width: 100%;
     height: 100%;
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
 }
 .fullPage_one{
     background: url('../img/home/1.png') no-repeat;
@@ -68,6 +68,7 @@ body,html{
 
 .fullPage_three{
     background-image: url('../img/home/3-2.png');
+    background-repeat: no-repeat;
 }
 
 .setOut{
@@ -85,4 +86,242 @@ body,html{
     font-weight: 0;
     color: #ffffff;
     margin-top: 15px;
+}
+
+.newOut_head>h3{
+    font-size: 28px;
+    font-weight: 0;
+    color: #ffffff;
+}
+.newOut_head>p{
+    font-size: 16px;
+    margin-top: 8px;
+    color: #ffffff;
+}
+.newOut_desc{
+    width: 100%;
+    margin-top: 67px;
+    white-space: nowrap;
+}
+.newOut_desc>p{
+    width: 1200px;
+    margin-right: 0;
+    text-indent: 2em;
+    font-size: 18px;
+    color: #ffffff;
+    white-space: pre-wrap;
+    line-height: 30px;
+}
+
+.newOut_box{
+    margin-top: 94px;
+}
+.newOut_box_list{
+    width: 180px;
+    margin-right: 24px;
+}
+.newOut_box_list>img{
+    width: 180px;
+    height: 178px;
+}
+.newOut_box_list>i{
+    width: 180px;
+    text-align: center;
+    color: red;
+    margin-top: 48px;
+}
+.newOut_box_list>p{
+    width: 180px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 24px;
+}
+
+
+
+
+
+.fullPage_four{
+    width: 100%;
+    background-image: url('../img/home/4.png');
+    background-repeat: no-repeat;
+    background-size: 753px 596px;
+    padding: 0;
+}
+.fullPage_four>.fp-tableCell{
+    padding: 0;
+    vertical-align: top;
+}
+.four_box{
+    width: 100%;
+    height: 100%;
+}
+.four_title{
+    width: 1200px;
+    font-size: 39px;
+    font-weight: 600;
+    color: #000000;
+}
+.four_content{
+    width: 1200px;
+    font-size: 18px;
+    margin-top: 37px;
+    color: #333333;
+    line-height: 30px;
+}
+
+.four_list{
+    margin-top: 91px;
+}
+
+.four_list_term{
+    width: 218px;
+    height: 270px;
+    background: red;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-left: 28px;
+}
+.four_list_term:first-of-type{
+    margin-left: 0;
+}
+.four_list_term>img{
+    width: 218px;
+    height: 270px;
+    vertical-align: middle;
+}
+.four_list_term>p{
+    width: 218px;
+    height: 68px;
+    line-height: 68px;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    margin-top: -68px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 25px;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+
+
+
+
+
+
+
+.fullPage_five{
+    width: 100%;
+    background-image: url("../img/home/5.png");
+    background-repeat: no-repeat;
+}
+.five_box{
+    width: 100%;
+}
+/* .five_switch{
+} */
+.five_switch_list{
+    width: 572px;
+    margin-left: 30px;
+}
+.five_switch_list:first-of-type{
+    margin-left: 0; 
+}
+.five_switch_list>img{
+    width: 572px;
+    height: 325px;
+    vertical-align: middle;
+}
+.five_switch_list_bot{
+    width: 572px;
+    height: 105px;
+    background: #407707;
+    padding: 20px 23px 10px 35px;
+    box-sizing: border-box;
+}
+.five_switch_list_bot_left{
+    flex: 1;
+    height: 100%;
+}
+.five_switch_list_bot_left>h3{
+    font-weight: normal;
+    font-size: 17px;
+}
+.five_switch_list_bot_left>p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.five_switch_list_bot_right{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.five_tab{
+    width: 524px;
+    height: 50px;
+    opacity: 0.79;
+    background: linear-gradient(296deg,rgba(220,179,133,0.06) 0%, #dba96a 39%, rgba(208,160,100,0.08) 84%);
+    margin-top: 76px;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+.five_tab_term{
+    color: #407707;
+    font-size: 18px;
+}
+.five_tab_term:nth-child(2){
+    font-size: 22px;
+}
+.five_tabIcon{
+    width: 524px;
+    height: 62px;
+    margin-top: 25px;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+.five_tabIcon_term>div{
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.five_tabIcon_term>div>p{
+    width: 6px;
+    height: 6px;
+    background: #02894a;
+    border-radius: 50%;
+}
+.five_tabIcon_term_active{
+    width: 62px;
+    height: 62px;
+    background: rgba(255,255,255,.51);
+    border-radius: 50%;
+}
+.five_tabIcon_term_active>div{
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.five_tabIcon_term_active>div>p{
+    width: 12px;
+    height: 12px;
+    background: #02894a;
+    border-radius: 50%;
+}
+
+
+
+
+
+.fullPage_six{
+    height: 813px;
+    background: #FBFFF5;
 }
