@@ -216,6 +216,7 @@ body,html{
 .fullPage_five{
     width: 100%;
     background-image: url("../img/home/5.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .five_box{
@@ -324,4 +325,74 @@ body,html{
 .fullPage_six{
     height: 813px;
     background: #FBFFF5;
+}
+
+.six_content{
+    height: 728px;
+    padding-top: 84px;
+    padding-left: 517px;
+}
+
+.six_content_imgs{
+    width: 800px;
+    height: 627px;
+    background: url("../img/home/map.png") no-repeat;
+    background-size: 800px 627px;
+    position: relative;
+}
+
+.six_content_imgs>img{
+    width: 200px;
+    height: 194px;
+    position: absolute;
+    right: 156px;
+    top: 184px;
+}
+
+.six_content_box{
+    width: 347px; 
+    height: 506px;
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px 1px 8px 0px rgba(210,215,220,0.50); 
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 660px;
+    padding: 15px;
+    /* right: -140px; */
+}
+.six_content_box>img{
+    width: 100%;
+    height: 218px;
+}
+.six_content_box>h3{
+    font-size: 19px;
+    color: #db2e3a;
+    padding: 30px 0 0 13px;
+}
+.box_info{
+    padding-left: 13px;
+}
+.box_info>p{
+    color: #666666;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.six_content_box>button{
+    width: 93px;
+    height: 37px;
+    background: #db2e3a;
+    border-radius: 2px;
+    border: none;
+    outline-style: none;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 13px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+.fullPage_six>.fp-tableCell{
+    vertical-align: top;
 }

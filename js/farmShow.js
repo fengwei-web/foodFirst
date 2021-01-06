@@ -5,6 +5,11 @@ $(function(){
     // let paging = new Paging({ total: 100 });
     
 
+    if(window.location.href.split('?')[1]){
+        var index = window.location.href.split('?')[1].split('=')[1] - 1;
+        $('.content_nav_tab_list').eq(index).addClass('content_nav_tab_list_active').siblings().removeClass('content_nav_tab_list_active');
+        $(".content_box").find("li:eq("+ index +")").show().siblings().hide();
+    }
     // tab切换  进入页面默认显示第一项内容
     $(".content_box").find('li:eq(0)').show().siblings().hide();
     $(".content_nav_tab_list").click(function(){
@@ -29,11 +34,40 @@ $(function(){
             }
             $(".list_bot_heads").html(str);
             $(".list_bot_head_rig").html(str1);
+            $(".list_bot_con_pic").find("img").attr("src",data.plotList[0].cropInfo.logoPath)
+            getLastDataByDeviceNum(data.plotList[0].deviceNum)
         }
     });
-
-    $(".list_bot_head_rig").on('click','.list_bot_head_rig_term',function (data) { 
-        console.log(data.currentTarget.innerHTML);
-
+    // 获取传感度数据
+    function getLastDataByDeviceNum(deviceNum){
+        $.ajax({
+            url: "http://weixin.himynf.com/app/smartCtrl/getLastDataByDeviceNum",
+            data:{
+                deviceNum: deviceNum
+            },
+            success(res){
+                $(".data1").html(res.rtData.airTemperature)
+                $(".data2").html(res.rtData.airHumidity)
+                $(".data3").html(res.rtData.soilTemperature)
+                $(".data4").html(res.rtData.soilHumidity)
+                $(".data5").html(res.rtData.light)
+                $(".data6").html(res.rtData.CO2)
+            }
+        })
+    }
+    $(".list_bot_head_rig").on('click','.list_bot_head_rig_term',function (e) { 
+        let content = e.currentTarget.innerHTML;
+        let arr = [].slice.call($(".list_bot_head_rig").find('div'));
+        arr.forEach((v,i) => {
+            // console.log(v.innerHTML == content)
+            if(v.innerHTML == content){
+                getLastDataByDeviceNum(data.plotList[i].deviceNum)
+                if(data.plotList[i].cropInfo){
+                    $(".list_bot_con_pic").find("img").attr("src",data.plotList[i].cropInfo.logoPath)
+                }else{
+                    $(".list_bot_con_pic").find("img").attr("src",'./img/farmShow/list1.png')
+                }
+            }
+        });
     })
 })

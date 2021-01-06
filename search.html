@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=yes">
-    <title>健康食材</title>
+    <meta name="viewport" content="user-scalable=yes" style="width: 100%;">
+    <title>搜索</title>
     <link rel="stylesheet" href="./css/common/reset.css">
     <link rel="stylesheet" href="./css/common/flex.css">
     <link rel="stylesheet" href="./css/common/header3.css">
     <link rel="stylesheet" href="./css/common/footer.css">
     <link rel="stylesheet" href="./css/common/icon.css">
     <link rel="stylesheet" href="./css/common/index.css">
-    <link rel="stylesheet" href="./css/healthyIngredients.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 <body>
     <!-- 头部 -->
     <div class="header-top3"></div>
     <!-- 内容 -->
     <div class="farmShow_content">
-        <div class="content_head">
-            <img src="./img/farmShow/head.png" alt="">
+        <div class="content_head flex flex--justify-content--center">
+            <input type="text" placeholder="请输入">
+            <div>
+                <i class="icon iconfont iconsousuo"></i>
+            </div>
         </div>
 
         <div class="content_nav wrapper flex flex--align-items--center flex--justify-content--space-between">
             <div class="content_nav_tab flex flex--align-items--center">
-                <div data-id="1" class="content_nav_tab_list content_nav_tab_list_active">蔬菜</div>
-                <div data-id="2" class="content_nav_tab_list">水果</div>
-                <div data-id="3" class="content_nav_tab_list">粮油</div>
-                <div data-id="4" class="content_nav_tab_list">红酒</div>
-                <div data-id="5" class="content_nav_tab_list">茯茶</div>
+                <div data-id="1" class="content_nav_tab_list content_nav_tab_list_active">健康食材</div>
+                <div data-id="2" class="content_nav_tab_list">农场展示</div>
+                <div data-id="3" class="content_nav_tab_list">精品民宿</div>
+                <div data-id="4" class="content_nav_tab_list">食为先云课堂</div>
+                <div data-id="5" class="content_nav_tab_list">共享食堂</div>
             </div>
             <div class="content_nav_crumbs flex flex--align-items--center">
                 <i class="icon iconfont iconfangzi" style="font-size: 20px;margin-right: 10px;"></i>
@@ -220,7 +223,7 @@
 </html>
 <script src="./js/common/jquery-1.11.1.min.js"></script>
 <script src="./js/common/index.js"></script>
-<script src="./js/healthyIngredients.js"></script>
+<script src="./js/search.js"></script>
 <script>
     let paging = new Paging({
         total: 100,

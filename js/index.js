@@ -13,7 +13,6 @@
     $(".newOut").css('display',"none")
     // 第三屏
     $(".fullPage_three").on('mouseover',()=>{
-        console.log("111")
         setTimeout(()=>{
             $('.setOut').css("display","none")
             $(".newOut").css('display',"block")
@@ -21,6 +20,11 @@
         },3000)
     })
 
+    $(".five_switch_list").click(function(){
+        if($(this).attr("data-type") != 2){
+            console.log('11');
+        }
+    })
 
 
     // js判断当前环境是在pc端还是手机端

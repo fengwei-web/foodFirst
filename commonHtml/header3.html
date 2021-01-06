@@ -4,18 +4,39 @@
     </div>
     
     <ul class="header_list flex flex--align-items--center">
-        <li><a href="../index.html">首页</a></li>
-        <li><a href="../enterFoodFirst.html">走进食为先</a></li>
-        <li><a href="../healthyIngredients.html">健康食材</a></li>
-        <li><a href="../farmShow.html">农场展示</a></li>
-        <li><a href="../index.html">精品民宿</a></li>
-        <li><a href="../index.html">共享厨房</a></li>
-        <li><a href="../index.html">食为先云课堂</a></li>
-        <li><a href="../index.html">会员专享</a></li>
-        <li><a href="/"><i class="icon iconfont iconsousuo"></i></a></li>
+        <li><a data-type="1" href="../index.html">首页</a></li>
+        <li><a data-type="2" href="../enterFoodFirst.html">走进食为先</a></li>
+        <li><a data-type="3" href="../healthyIngredients.html">健康食材</a></li>
+        <li><a data-type="4" href="../farmShow.html">农场展示</a></li>
+        <li><a data-type="5" href="../boutiqueCivil.html">精品民宿</a></li>
+        <li><a data-type="6" href="../shareKitchen.html">共享厨房</a></li>
+        <li><a data-type="7" href="../classroom.html">食为先云课堂</a></li>
+        <li><a data-type="8" href="../member.html">会员专享</a></li>
+        <li><a data-type="9" href="../search.html"><i class="icon iconfont iconsousuo"></i></a></li>
     </ul>
 </div>
 <script type="text/javascript">
+    var url = window.location.href.split('/')[window.location.href.split('/').length-1];
+    var arr = $(".header_list").find("li");
+    var newArr = [].slice.call(arr);
+    url =url.split("?")[0]
+    newArr.forEach(v=>{
+        var str = v.innerHTML.split('>');
+        var newStr = str[0].split('/')[1];
+        var strIndex = newStr.indexOf('"')
+        newStr = newStr.replace('"','');
+        if(newStr == url){
+            var itemId = parseInt(v.innerHTML.split('"')[1])-1 
+            $(".header_list").find('li').eq(itemId).find("a").addClass("header_list_active").siblings().removeClass('header_list_active')
+        }
+    })
+
+
+
+
+
+    
+
     // var path = window.location.pathname.split('/')[1];
     // var pathNmae = path.split('.')[0];
     // var tab = $(".nav-list ul li");

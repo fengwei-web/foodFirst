@@ -44,6 +44,10 @@
 	color: #fff;
 	font-size: 16px;
 }
+.header_list>li>a>i{
+	font-size: 26px;
+	color: #333;
+}
 .header_list>li:last-of-type{
 	margin-left: 58px;
 }
