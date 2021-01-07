@@ -25,7 +25,6 @@ Paging.prototype.show = function () {
     }
     this.createElement('first ' + disable, this.options.firstText);
     this.createElement('prev ' + disable, this.options.prevText);
-
     this.createNumElement();
 
     disable = ""
@@ -78,16 +77,22 @@ Paging.prototype.PageClick = function() {
     let _this = this;
     let PageTotalNum = this.getPageTotalNum();
     this.options.container.addEventListener('click', function(e) {
+        console.log(e);
         if(e.target.classList.contains('first')){
             _this.toPage(1);
+            console.log("1",_this.toPage(1))
         } else if (e.target.classList.contains('prev')) {
             _this.toPage(_this.options.current - 1);
+            console.log("2",_this.options.current - 1)
         } else if (e.target.classList.contains('next')) {
             _this.toPage(_this.options.current + 1);
+            console.log("3",_this.options.current + 1)
         } else if (e.target.classList.contains('last')) {
             _this.toPage(PageTotalNum);
+            console.log("4",PageTotalNum)
         } else if(e.target.classList.contains('pagingDiv')){
             _this.toPage(+e.target.innerText);
+            console.log("5",+e.target.innerText)
         }
     })
 }

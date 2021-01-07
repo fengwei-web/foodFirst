@@ -21,8 +21,17 @@
     })
 
     $(".five_switch_list").click(function(){
+        let itemId = $(this).attr("data-type")-1;
+        // 当前点击图片路径
+        let imgSrc = $(".five_switch_list").eq(itemId).find("img")
+        let twoImgSrc = $(".five_switch_list").eq(1).find("img");
         if($(this).attr("data-type") != 2){
-            console.log('11');
+            console.log()
+            let img = twoImgSrc.attr("src");
+            twoImgSrc.attr("src",imgSrc.attr("src"));
+            imgSrc.attr("src",img)
+        }else{
+            console.log('中间的',imgSrc)
         }
     })
 

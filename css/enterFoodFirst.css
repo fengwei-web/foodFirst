@@ -26,6 +26,7 @@
     color: #333333;
     margin-right: 57px;
     position: relative;
+    cursor: pointer;
 }
 .enter_tab_left_list_active{
     color: #4f7c08;
