@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common/icon.css">
     <link rel="stylesheet" href="./css/common/footer.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/common/swiper.min.css">
 </head>
 <body>
     <div class="pages_con">
@@ -18,18 +19,34 @@
             <div class="page1_content">
                 <!-- 轮播图 -->
                 <div class="page1_content_swiper">
-                    <div class="swiper_list">
-                        <img src="./img/home/1.png" alt="">
-                        <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
-                            <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
-                            <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                    <div id="only">
+                        <div class="swiper_list">
+                            <img src="./img/home/1.png" alt="">
+                            <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
+                                <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                                <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="swiper_list">
-                        <img src="./img/home/2.png" alt="">
-                        <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
-                            <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
-                            <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                        <div class="swiper_list">
+                            <img src="./img/home/2.png" alt="">
+                            <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
+                                <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                                <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                            </div>
+                        </div>
+                        <div class="swiper_list">
+                            <img src="./img/home/3.png" alt="">
+                            <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
+                                <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                                <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                            </div>
+                        </div>
+                        <div class="swiper_list">
+                            <img src="./img/home/4.png" alt="">
+                            <div class="page1_content_box_con flex flex--row flex--align-items--center flex--justify-content--center">
+                                <h3>Shiweixian's efforts,just to let you entrance happiness and long-term health</h3>
+                                <p>食为先人的努力，只是为了您入口的幸福感和今后的长久健康</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,13 +164,14 @@
 
         <div class="pages page5">
             <div class="header1"></div>
-            <div class="page5_content">
+            <div class="page5_content" style="position: relative;">
                 <div class="page5_content_switch flex flex--align-items--end flex--justify-content--center">
-                    <div class="page5_content_switch_list">
-                        <img src="./img/home/1.png" alt="">
+                    
+                    <div data-index="2" class="page5_content_switch_list page5_content_switch_list2">
+                        <img src="./img/home/2.png" alt="">
                         <div class="page5_content_switch_list_bot flex flex--align-items--center">
                             <div class="page5_content_switch_list_bot_left">
-                                <h3>2019-09</h3>
+                                <h3>2011-06</h3>
                                 <p>在这里，传播科学种植技术，交流美食养生知识，探讨亲子科普、教育心得…………</p>
                             </div>  
                             <div class="page5_content_switch_list_bot_right flex flex--align-items--center flex--justify-content--center">
@@ -161,23 +179,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page5_content_switch_list">
-                        <img src="./img/home/1.png" alt="">
+                    <div data-index="3" class="page5_content_switch_list page5_content_switch_list3">
+                        <img src="./img/home/3.png" alt="">
                         <div class="page5_content_switch_list_bot flex flex--align-items--center">
                             <div class="page5_content_switch_list_bot_left">
-                                <h3>2019-09</h3>
-                                <p>在这里，传播科学种植技术，交流美食养生知识，探讨亲子科普、教育心得…………</p>
-                            </div>  
-                            <div class="page5_content_switch_list_bot_right flex flex--align-items--center flex--justify-content--center">
-                                <i class="icon iconfont iconyou"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="page5_content_switch_list">
-                        <img src="./img/home/1.png" alt="">
-                        <div class="page5_content_switch_list_bot flex flex--align-items--center">
-                            <div class="page5_content_switch_list_bot_left">
-                                <h3>2019-09</h3>
+                                <h3>2012-07</h3>
                                 <p>在这里，传播科学种植技术，交流美食养生知识，探讨亲子科普、教育心得…………</p>
                             </div>  
                             <div class="page5_content_switch_list_bot_right flex flex--align-items--center flex--justify-content--center">
@@ -186,6 +192,32 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="swiper-container" style="width: 1100px;height:575px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div data-index="1" class="page5_content_switch_list page5_content_switch_list1">
+                                <img src="./img/home/1.png" alt="">
+                                <div class="page5_content_switch_list_bot flex flex--align-items--center">
+                                    <div class="page5_content_switch_list_bot_left">
+                                        <h3>2010-05</h3>
+                                        <p>在这里，传播科学种植技术，交流美食养生知识，探讨亲子科普、教育心得…………</p>
+                                    </div>  
+                                    <div class="page5_content_switch_list_bot_right flex flex--align-items--center flex--justify-content--center">
+                                        <i class="icon iconfont iconyou"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            sdsd
+                        </div>
+                        <div class="swiper-slide">
+                            yjmnhgh
+                        </div>
+                        <div class="swiper-slide">
+                            sddfdfdfdfdf
+                        </div>
+                    </div>
+                </div> -->
+
 
                 <div class="page5_content_tab flex flex--align-items--center flex--justify-content--space-around">
                     <div class="page5_content_tab_term">种植技术</div>
@@ -246,4 +278,26 @@
 </html>
 <script src="./js/common/jquery-1.11.1.min.js"></script>
 <script src="./js/common/jquery.mousewheel.js"></script>
+<script src="./js/common/swiper.min.js"></script>
 <script src="./js/home.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+		autoplay:3500,
+		autoplayDisableOnInteraction: false,
+    	slidesPerView: 3,
+      	spaceBetween: 10,
+	  	centeredSlides: true,
+	  	loop: true,
+	  	speed:800,
+	  	slideToClickedSlide:true,
+		onSlideChangeStart: function(swiper){
+      		$('.swiper-slide').eq(swiper.activeIndex).find('.quanbu3_a_left').css('background-image',"url()");
+    		$('.swiper-slide').eq(swiper.activeIndex).siblings().find('.quanbu3_a_left').css('background-image',"url(/static/img/d_img/29.png)").css(" background-repeat","no-repeat").css('background-size','100% 100%')
+		}
+    }); 
+	$('.swiper-container').mouseenter(function () {
+        swiper.stopAutoplay();
+    }).mouseleave(function () {
+        swiper.startAutoplay();
+    })	
+</script>

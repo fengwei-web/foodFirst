@@ -16,11 +16,19 @@
     height: 80px;
     line-height: 80px;
     color: #333333;
-    cursor: pointer;
+}
+.content_nav_tab_list>a{
+    height: 100%;
+    display: block;
+    color: #333;
+    text-decoration: none;
 }
 .content_nav_tab_list_active{
     color: #457A05;
     position: relative;
+}
+.content_nav_tab_list_active>a{
+    color: #457a05;
 }
 .content_nav_tab_list_active::after{
     content: "";
@@ -146,4 +154,8 @@
     font-size: 15px;
     color: #333;
     cursor: pointer;
+}
+.list_next>p>a{
+    color: #333;
+    text-decoration: none;
 }

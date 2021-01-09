@@ -18,9 +18,18 @@
     color: #333333;
     cursor: pointer;
 }
+.content_nav_tab_list>a{
+    color: #333;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+}
 .content_nav_tab_list_active{
     color: #457A05;
     position: relative;
+}
+.content_nav_tab_list_active>a{
+    color: #457A05;
 }
 .content_nav_tab_list_active::after{
     content: "";
@@ -87,4 +96,8 @@
     font-size: 15px;
     color: #333333;
     cursor: pointer;
+}
+.list_bot_left>a,.list_bot_right>a{
+    color: #333;
+    text-decoration: none;
 }

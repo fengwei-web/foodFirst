@@ -20,6 +20,12 @@
         },3000)
     })
 
+
+
+
+
+
+    $(".five_switch_list_bot").hide().eq(1).show();
     $(".five_switch_list").click(function(){
         let itemId = $(this).attr("data-type")-1;
         // 当前点击图片路径

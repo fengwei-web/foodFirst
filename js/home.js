@@ -5,27 +5,35 @@ $(function(){
 
 
     let set = 0;
+    let length = document.querySelectorAll('.swiper_list').length
+    let onwidth = 100 * parseInt(length) + '%'
+    let slwidth = 100 / parseInt(length) + '%'
+    console.log(onwidth)
+    document.querySelectorAll('.swiper_list').forEach((im,ix) => {
+        im.style.width = slwidth
+    })
+    document.querySelector('#only').style.width = onwidth
     // 点击上一页
-    $(".swiper_list").eq(set).show().siblings().hide();
     $(".page1_content_box_left").click(()=>{
         if(set == 0){
             set = $(".swiper_list").length-1
         }else{
             set--;
         }
-        console.log(set)
-        $(".swiper_list").eq(set).show().siblings().hide();
+        let lengths = document.querySelectorAll('.swiper_list').length
+        let a = (-100 / lengths) * set +'%'
+        console.log(document.querySelector('#only').style.transform = `translateX(${a})`)
     })
-
-    // 点击上一页
+    // 点击下一页
     $(".page1_content_box_right").click(()=>{
         if(set == $(".swiper_list").length-1){
             set = 0
         }else{
             set++;
         }
-        console.log(set)
-        $(".swiper_list").eq(set).show().siblings().hide();
+        let lengths = document.querySelectorAll('.swiper_list').length
+        let a = (-100 / lengths) * set +'%'
+        console.log(document.querySelector('#only').style.transform = `translateX(${a})`)
     })
     
     // 第三屏
@@ -37,6 +45,49 @@ $(function(){
             $(".page3_content").css('background-image',"url('./img/home/3-1.png')");
         },3000)
     })
+
+
+
+    // let left2 = parseFloat($(".page5_content_switch_list").css('left').split("p")[0]);
+    // let left3 = parseFloat($(".page5_content_switch_list").css('left').split("p")[0]);
+    $(".page5_content_switch_list_bot").hide().eq(1).show();
+    
+    // $(".page5_content_switch_list").click(function(){
+    //     let itemId = $(this).attr("data-index")-1;
+    //     let left = parseFloat($(".page5_content_switch_list").eq(itemId).css('left').split("p")[0]);
+    //     let dom = $(".page5_content_switch_list").eq(itemId)
+    //     let gu = $(".page5_content_switch_list").eq(1);
+    //     dom.css('left',left + 'px')
+    //     gu.css('left',dom.css('left',left + 'px').css('left'))
+    // })
+
+
+
+
+
+    $(".page5_content_switch_list").click(function(){
+        let itemId = $(this).attr("data-index")-1;
+        // 当前点击图片路径
+        let imgSrc = $(".page5_content_switch_list").eq(itemId).find('img')
+        let divStr = $(".page5_content_switch_list").eq(itemId).find("div")
+        let tab = $(".page5_content_tab_term").eq(itemId)
+        let twoImgSrc = $(".page5_content_switch_list").eq(1).find("img");
+        let twoDivStr = $(".page5_content_switch_list").eq(1).find("div");
+        let twoTab = $(".page5_content_tab_term").eq(1)
+        if($(this).attr("data-type") != 2){
+            let img = twoImgSrc.attr("src");
+            let tabCen = twoTab.html()
+            twoImgSrc.attr("src",imgSrc.attr("src"));
+            twoDivStr.find("div>h3").html(divStr.find("div>h3").html()).fadeIn();
+            twoDivStr.find("div>p").html(divStr.find("div>p").fadeIn().html());
+            imgSrc.attr("src",img)
+            twoTab.html(tab.html())
+            tab.html(tabCen)
+        }else{
+            console.log('中间的',imgSrc)
+        }
+    })
+
 
 
 
