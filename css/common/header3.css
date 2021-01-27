@@ -1,12 +1,19 @@
 .header{
-	width: 100%;
+	min-width: 1200px;
 	height: 84px;
 	background: #fff;
+	position: relative;
+	padding-left: 120px;
+	box-sizing: border-box;
 }
 .header_log{
 	width: 62px;
 	height: 70px;
-	margin-left: 21px;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	left: 21px;
+
 }
 .header_log>a{
 	text-decoration: none;
@@ -19,12 +26,22 @@
 	height: 70px;
 }
 
+.header_big{
+	width: 1200px;
+}
+
 .header_list{
+	width: 1300px;
+	justify-content: space-around;
 	height: 70px;
-	margin-left: 191px;
+	margin-left: -65px;
+	padding-right: 60px;
+	box-sizing: border-box;
+
+	/* margin-left: 191px; */
 }
 .header_list>li{
-	margin-left: 83px;
+	/* margin-left: 83px; */
 	height: 70px;
 	font-size: 16px;
 	white-space: nowrap;
@@ -57,7 +74,7 @@
 }
 
 .header_list>li:last-of-type{
-	margin-left: 58px;
+	/* margin-left: 58px; */
 }
 .iconsousuo{
 	font-size: 16px;

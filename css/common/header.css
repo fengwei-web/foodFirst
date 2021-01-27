@@ -1,5 +1,5 @@
 .header{
-	width: 100%;
+	width: 1600px;
 	height: 84px;
 	background: rgba(0, 0, 0, 0);
 	position: absolute;
@@ -7,10 +7,20 @@
 	left: 0;
 	z-index: 100;
 }
+.header_big{
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	left: 21px;
+}
 .header_log{
 	width: 62px;
 	height: 70px;
 	margin-left: 21px;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	left: 21px;
 }
 .header_log>a{
 	text-decoration: none;
@@ -28,16 +38,18 @@
 	white-space: nowrap;
 	color: #ffffff;
 	line-height: 26px;
-	margin-left: 38px;
+	margin-left: 138px;
 }
 
 .header_list{
-
+	width: 1300px;
+	justify-content: space-around;
+	margin-left: 65px;
+	padding-right: 60px;
+	box-sizing: border-box;
 }
 .header_list>li{
-	margin-left: 83px;
 	font-size: 16px;
-	white-space: nowrap;
 }
 .header_list>li>a{
 	text-decoration: none;
@@ -49,7 +61,7 @@
 	color: #333;
 }
 .header_list>li:last-of-type{
-	margin-left: 58px;
+	/* margin-left: 58px; */
 }
 .iconsousuo{
 	font-size: 16px;
